@@ -76,3 +76,4 @@ Deployment-ready Django project template.
     # Delete all Docker files
     docker system prune -a -f --volumes
     ```
+   
