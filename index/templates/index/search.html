@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block main %}
+    <h2>Search</h2>
+    {% if query %}
+        <p>Your search for "{{ query }}" returned {{ count }} results.</p>
+        <ol>
+        {% for result in results %}
+            <li>{{ result }}</li>
+        {% endfor %}
+        </ol>
+    {% else %}
+        <form class="form-inline my-2 my-lg-0" action="{% url 'index:search' %}" method="get">
+            <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    {% endif %}
+{% endblock %}

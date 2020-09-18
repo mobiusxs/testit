@@ -1,0 +1,15 @@
+.git/
+.idea/
+.gitignore
+.dockerignore
+*.pyc
+*.sqlite3
+
+Dockerfile
+Procfile
+
+docker-compose.yml
+README.md
+
+__pycache__/
+venv/
